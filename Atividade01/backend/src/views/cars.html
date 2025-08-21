@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Carros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/cars.html">Carros</a></li>
+        <li><a href="/person.html">Pessoas</a></li>
+        <li><a href="/personCars.html">Associações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>🚗 Lista de Carros</h1>
+
+
+  <form id="carForm">
+    <input type="hidden" id="carId">
+    <input type="text" id="modelo" placeholder="Modelo" required>
+    <input type="text" id="marca" placeholder="Marca" required>
+    <input type="number" id="ano" placeholder="Ano" required>
+    <button type="submit">Adicionar</button>
+    <button type="button" id="cancelEdit" style="display:none;">Cancelar</button>
+  </form>
+
+
+  <ul id="carsList"></ul>
+
+  <script src="cars.js"></script>
+</body>
+</html>
