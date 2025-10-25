@@ -1,0 +1,142 @@
+/* ======= Estilo Geral ======= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 700px;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff7f0, #ffe5d9);
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #ff6b00;
+  margin-bottom: 20px;
+}
+
+/* ======= Formulário ======= */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+}
+
+select, input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ff8c42;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+select:focus, input:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 5px rgba(255,107,0,0.4);
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e05500;
+  transform: scale(1.05);
+}
+
+/* ======= Mensagem de alerta ======= */
+.alert {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  display: none;
+  transition: all 0.3s;
+}
+
+.alert.error {
+  background: #dc3545;
+}
+
+.alert.success {
+  background: #ff9800;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fff3e0;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #ffe0cc;
+}
+
+.actions button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.actions button:first-child {
+  background: #ff9800;
+}
+
+.actions button:first-child:hover {
+  background: #e68a00;
+}
+
+.actions button:last-child {
+  background: #dc3545;
+}
+
+.actions button:last-child:hover {
+  background: #b52a37;
+}
+
+
+#discosList {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#discosList th, #discosList td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#discosList th {
+  background-color: #ff9800;
+}
