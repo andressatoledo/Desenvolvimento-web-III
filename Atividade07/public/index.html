@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Eventos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Controle de Eventos</h1>
+
+  <form id="eventoForm">
+    <input type="hidden" id="eventoId" />
+
+    <input type="text" id="Titulo" placeholder="Título" required />
+    <input type="text" id="Descricao" placeholder="Descrição" required />
+    <input type="text" id="Local" placeholder="Local" required />
+    <input type="number" step="0.01" id="Valor" placeholder="Valor (R$)" required />
+    <input type="date" id="Data" required />
+
+    <button type="submit" class="insert-btn">Cadastrar</button>
+    <button type="button" id="cancelEdit" style="display: none;">Cancelar</button>
+  </form>
+
+  <table id="eventoList">
+
+    <thead>
+
+    </thead>
+
+    <tbody>
+    </tbody>
+  </table>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
