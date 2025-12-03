@@ -1,0 +1,296 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff7f0, #ffe5d9);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+.btn-area {
+  grid-column: span 3;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+
+h1 {
+  text-align: center;
+  color: #ff6b00;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alinhamento {
+  display: flex;
+  flex-wrap: nowrap;   /* impede quebrar linha */
+  align-items: center;
+  gap: 8px;
+}
+
+/* === CORRIGE A TABELA === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ff8c42;
+  padding: 8px;
+  text-align: left;
+  background: #fff;
+  font-size: 14px;
+  white-space: nowrap; /* evita quebrar layout */
+}
+
+/* Tira o DISPLAY FLEX que estava quebrando sua tabela */
+td {
+  display: table-cell !important;
+  width: auto !important;
+  flex: unset !important;
+  justify-content: unset !important;
+  align-items: unset !important;
+}
+
+/* Cabeçalho */
+thead th {
+  background: #fd9902;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+select, input, td {
+  flex: 1;
+  min-width: 130px;
+  padding: 10px;
+  border: 1px solid #ff8c42;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+  background: #fff;
+}
+
+
+
+select:focus, input:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 5px rgba(255,107,0,0.4);
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #ff6b00;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e05500;
+  transform: scale(1.05);
+}
+
+/* ======= Mensagens de Alerta ======= */
+.alert {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  display: none;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.alert.error {
+  background: #dc3545;
+}
+
+.alert.success {
+  background: #28a745;
+}
+
+/* ======= Lista de Despesas ======= */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #fff3e0;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+  background: #ffe0cc;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  padding: 6px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+.actions button:first-child {
+  background: #007bff;
+}
+
+.actions button:first-child:hover {
+  background: #0056b3;
+}
+
+.actions button:last-child {
+  background: #dc3545;
+}
+
+.actions button:last-child:hover {
+  background: #b52a37;
+}
+
+#expensesList {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#expensesList th, #expensesList td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+#expensesList th {
+  background-color: #fd9902;
+  color: white;
+}
+
+
+.total {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ff6b00;
+  margin-top: 25px;
+}
+
+
+
+.edit-btn{
+  background-color: blue;
+
+}
+
+.delete-btn{
+  background-color: red;
+}
+
+.insert-btn{
+  background-color: green;
+}
+
+.filtros-container {
+  display: flex;
+  gap: 10px;
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; /* centralizado */
+}
+
+.filtros-container input,
+.filtros-container select {
+  padding: 10px;
+  border: 1px solid #ff8c42;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 150px;
+  background: #fff;
+}
+
+.filtros-container button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btnFiltrar {
+  background: #007bff;
+}
+
+#btnFiltrar:hover {
+  background: #0056b3;
+}
+
+#btnLimpar {
+  background: #dc3545;
+}
+
+#btnLimpar:hover {
+  background: #b52a37;
+}

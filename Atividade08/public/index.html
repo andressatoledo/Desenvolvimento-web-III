@@ -1,0 +1,161 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Eventos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Controle de Eventos</h1>
+
+  <form id="eventoForm">
+    <input type="hidden" id="eventoId" />
+
+    <input type="text" id="Titulo" placeholder="Título" required />
+    <input type="text" id="Descricao" placeholder="Descrição" required />
+    <input type="text" id="Local" placeholder="Local" required />
+    <input type="number" step="0.01" id="Valor" placeholder="Valor (R$)" required />
+    <input type="date" id="Data" required />
+
+    <button type="submit" class="insert-btn">Cadastrar</button>
+    <button type="button" id="cancelEdit" style="display: none;">Cancelar</button>
+  </form>
+
+  <table id="eventoList">
+
+    <thead>
+
+    </thead>
+
+    <tbody>
+    </tbody>
+  </table>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ordem de Serviço</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>Controle de Ordens de Serviço</h1>
+
+  <form id="ordemForm">
+    <input type="hidden" id="ordemId" />
+
+    <div class="field">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" required />
+    </div>
+
+    <div class="field">
+      <label for="descricao">Descrição</label>
+      <input type="text" id="descricao" required />
+    </div>
+
+    <div class="field">
+      <label for="status">Status</label>
+      <select id="status" required>
+        <option value="">Selecione</option>
+        <option value="aberta">Aberta</option>
+        <option value="em andamento">Em andamento</option>
+        <option value="concluída">Concluída</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="prioridade">Prioridade</label>
+      <select id="prioridade" required>
+        <option value="">Selecione</option>
+        <option value="baixa">Baixa</option>
+        <option value="média">Média</option>
+        <option value="alta">Alta</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="responsavel">Responsável</label>
+      <input type="text" id="responsavel" />
+    </div>
+
+    <div class="field">
+      <label for="setorSolicitante">Setor Solicitante</label>
+      <input type="text" id="setorSolicitante" required />
+    </div>
+
+    <div class="field">
+      <label for="prazoEstimado">Prazo estimado</label>
+      <input type="date" id="prazoEstimado" />
+    </div>
+
+    <div class="field">
+      <label for="valorServico">Valor do serviço (R$)</label>
+      <input type="number" step="0.01" id="valorServico" required />
+    </div>
+
+    <div class="btn-area">
+      <button type="submit" class="insert-btn">Cadastrar</button>
+      <button type="button" id="cancelEdit" style="display: none;">Cancelar</button>
+    </div>
+  </form>
+
+  <div id="filtros" class="filtros-container">
+    <input type="text" id="filtroTitulo" placeholder="Pesquisar por título">
+
+    <select id="filtroStatus">
+      <option value="">Todos os status</option>
+      <option value="aberta">Aberta</option>
+      <option value="em andamento">Em andamento</option>
+      <option value="concluída">Concluída</option>
+    </select>
+
+    <select id="filtroPrioridade">
+      <option value="">Todas as prioridades</option>
+      <option value="baixa">Baixa</option>
+      <option value="média">Média</option>
+      <option value="alta">Alta</option>
+    </select>
+
+    <input type="text" id="filtroSetor" placeholder="Setor solicitante">
+
+    <button id="btnFiltrar">Filtrar</button>
+    <button id="btnLimpar">Limpar</button>
+  </div>
+
+  <table id="ordemList">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Status</th>
+        <th>Prioridade</th>
+        <th>Responsável</th>
+        <th>Setor</th>
+        <th>Prazo</th>
+        <th>Valor (R$)</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
